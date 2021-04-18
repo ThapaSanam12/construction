@@ -1,0 +1,15 @@
+   <div class="modal-body">
+            <form action="/editAproject/edit/{{user.id}}" method="POST" enctype="multipart/form-data" class="membership-form webform" role="form">
+                <input type="text" class="form-control" value="{{user.name}}" name="work" >
+ <input type="file" name="uploaded_image"  placeholder="" value="{{user.image}}" class="form-control">
+
+        
+                <input type="text" class="form-control" rows="3" name="description" value="{{user.description}}"  wplaceholder="Additional Message">
+
+                <button type="submit" class="form-control" id="submit-button" name="submit">Submit Button</button>
+
+            </form>
+                {{#if message }}
+         <h4 class="alert alert-danger mt-4">{{message}}</h4>
+	 {{/if}}
+          </div>

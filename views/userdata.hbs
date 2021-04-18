@@ -1,0 +1,38 @@
+
+<!Doctype html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>user data</title>
+     	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<li><a href="/">Home</a></li>
+<table>
+  <tr>
+<td>id</td>
+<td>firstname</td>
+<td>eamil</td>
+<td>password</td>
+
+  </tr> 
+{{#each userdata}}
+  <tr>
+
+      <td>{{this.id}}</td>
+        <td>{{this.name}}</td>
+        
+                    <td>{{this.email}}</td>
+                              <td>{{this.password}}</td>                                         
+                              <td>
+                                            <a href="/userdata/edit-form/{{this.id}}" class="btn btn-info btn-sm">Edit</a>
+                                             <a href="/userdata/delete/{{this.id}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure ?')">Delete</a>
+            </td>
+  </tr>
+{{/each}}
+</table>
+
+</body>		
+</html>
+	 
+	 
